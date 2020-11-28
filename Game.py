@@ -43,7 +43,8 @@ class Game:
             'ah3': ''
         }
 
-        # full path in case we wanted to show it graphically
+        # full path in case you want to show the full path
+        # not used in current implementation, but feel free to use it
         self.full_path = {
             "bfs": [],
             'ucs': [],
@@ -56,7 +57,7 @@ class Game:
         }
 
     # ===========================================================================================
-    #  CREATING PATH AND FULL PATH AFTER THE SOLUTION OF AN ALGORITHM
+    #  CREATING PATH AND FULL PATH AFTER THE SOLUTION IS GIVEN TO GAME
     # ===========================================================================================
     def calculate_path_cost(self, algo):
         current = self.goal
@@ -122,6 +123,7 @@ class Game:
     # ===========================================================================================
     @staticmethod
     # DRAWS A STATE ON THE CONSOLE
+    # this method is not used in the program, if you want to print the solution you can use this
     def draw_state(state):
         print("_________________________")
         print(f"|\t{state[0][0]} \t|\t{state[0][1]} \t|\t{state[0][2]} \t|")

@@ -91,6 +91,7 @@ class Node:
                            abs(j - Node.getCol(value, goal_state))
         return counter
 
+    # STATIC METHODS FOR COMPARISON BETWEEN TWO NODES
     @staticmethod
     def get_misplaced(node):
         return node.misplaced
@@ -112,6 +113,7 @@ class Node:
     @staticmethod
     def get_manhattan_cost(node):
         return node.manhattan + node.cost
+
     # ============================================================================================
     #   STATIC METHODS FOR SIMPLE OPERATIONS IN NODE
     # ============================================================================================

@@ -1,6 +1,3 @@
-import copy
-import time
-
 from BFS import *
 from DFS import *
 from UCS import *
@@ -26,21 +23,19 @@ init5 = [['5', '6', '7'], ['4', '_', '8'], ['3', '2', '1']]
 
 goal = [['1', '2', '3'], ['8', '_', '4'], ['7', '6', '5']]
 
-# test case of the class project
-s_init = [['7', '2', '4'], ['5', '_', '6'], ['8', '3', '1']]
-s_goal = [['_', '1', '2'], ['3', '4', '5'], ['6', '7', '8']]
-
 # UNCOMMENT FOR GETTING INPUT FROM THE USER
 # user_init, user_goal = get_input()
 
 # creating the game
-# first is initial state, and second goal state
+# first argument is initial state, and second is goal state
 game = Game(init2, goal)
+
+# exit the program is game is not solvable
 if not is_reachable(game.init.state, game.goal_state):
     unreachable_statement()
     sys.exit()
 
-time.sleep(1)
+
 # ===========================================================================================
 #   PERFORMING SEARCH ALGORITHMS
 # ===========================================================================================
@@ -88,6 +83,9 @@ def run_algorithms():
 
 run_algorithms()
 
+# ===========================================================================================
+# PRINTING THE INFORMATION
+# ===========================================================================================
 line_seperator()
 print("\033[93mPLEASE NOTE THAT AH3 ALGORITHM IS NOT GUARANTEED TO FIND OPTIMAL SOLUTION\033[0m")
 line_seperator()
