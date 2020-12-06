@@ -103,7 +103,7 @@ class Node:
     @staticmethod
     # when it's hard to get an answer, use this
     # it will solve the 8puzzle but not in an optimal way
-    def get_misplaced_cost_not_complete(node):
+    def get_misplaced_cost_not_admissible(node):
         return node.misplaced * 100 + node.cost
 
     @staticmethod

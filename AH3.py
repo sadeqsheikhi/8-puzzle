@@ -1,5 +1,5 @@
 from Node import Node
-
+# This A* algorithm does not use an admissible heuristic, so it does not find an optimal solution
 
 def ah3(init, goal_state):
     frontier, explored, counter = [init], [], 0
@@ -24,7 +24,7 @@ def ah3(init, goal_state):
             # inserting to frontier in a sorted way using misplaced_tiles heuristic
             node.misplaced_tiles(goal_state)
             frontier.append(node)
-            frontier.sort(key=Node.get_misplaced_cost_not_complete)
+            frontier.sort(key=Node.get_misplaced_cost_not_admissible)
 
         # printing info and setting the limitation
         counter += 1
